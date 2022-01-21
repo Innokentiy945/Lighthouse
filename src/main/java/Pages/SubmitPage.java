@@ -19,5 +19,8 @@ public class SubmitPage extends AbstractPage {
     public void verifyingThatSubmitWasSuccessful() {
         driver.manage().timeouts().implicitlyWait(600, TimeUnit.SECONDS);
         Assert.assertTrue(successfulConformation.isDisplayed());
+        Assert.assertEquals(successfulConformation.getText(),
+                "Thank you for singing up!\n" +
+                "We will be in touch with you shortly.");
     }
 }
